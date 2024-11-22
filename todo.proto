@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+package todo;
+
+service TodoService {
+  rpc AddTask(AddTaskRequest) returns (AddTaskResponse);
+  rpc GetTask(GetTaskRequest) returns (GetTaskResponse);
+  rpc ListTasks(Empty) returns (ListTasksResponse);
+}
+
+message AddTaskRequest {
+  string description = 1;
+}
+
+message AddTaskResponse {
+  string id = 1;
+}
+
+message GetTaskRequest {
+  string id = 1;
+}
+
+message GetTaskResponse {
+  string id = 1;
+  string description = 2;
+}
+
+message Empty {}
+
+message ListTasksResponse {
+  repeated GetTaskResponse tasks = 1;
+}

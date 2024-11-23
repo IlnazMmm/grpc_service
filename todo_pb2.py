@@ -5,6 +5,8 @@
 # Protobuf Python Version: 5.28.1
 """Generated protocol buffer code."""
 from google.protobuf import descriptor as _descriptor
+from google.protobuf import message as _message
+from google.protobuf import reflection as _reflection
 from google.protobuf import descriptor_pool as _descriptor_pool
 from google.protobuf import runtime_version as _runtime_version
 from google.protobuf import symbol_database as _symbol_database
@@ -22,9 +24,69 @@ _runtime_version.ValidateProtobufRuntimeVersion(
 _sym_db = _symbol_database.Default()
 
 
-
-
 DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\ntodo.proto\x12\x04todo\"%\n\x0e\x41\x64\x64TaskRequest\x12\x13\n\x0b\x64\x65scription\x18\x01 \x01(\t\"\x1d\n\x0f\x41\x64\x64TaskResponse\x12\n\n\x02id\x18\x01 \x01(\t\"\x1c\n\x0eGetTaskRequest\x12\n\n\x02id\x18\x01 \x01(\t\"2\n\x0fGetTaskResponse\x12\n\n\x02id\x18\x01 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x02 \x01(\t\"\x07\n\x05\x45mpty\"9\n\x11ListTasksResponse\x12$\n\x05tasks\x18\x01 \x03(\x0b\x32\x15.todo.GetTaskResponse2\xb0\x01\n\x0bTodoService\x12\x36\n\x07\x41\x64\x64Task\x12\x14.todo.AddTaskRequest\x1a\x15.todo.AddTaskResponse\x12\x36\n\x07GetTask\x12\x14.todo.GetTaskRequest\x1a\x15.todo.GetTaskResponse\x12\x31\n\tListTasks\x12\x0b.todo.Empty\x1a\x17.todo.ListTasksResponseb\x06proto3')
+
+
+# DESCRIPTOR = _descriptor.FileDescriptor(
+#   name='todo.proto',
+#   package='todo',
+#   syntax='proto3',
+#   serialized_options=None,
+#   serialized_pb=b'\n\ntodo.proto\x12\x04todo\"%\n\x0e\x41\x64\x64TaskRequest\x12\x13\n\x0b\x64\x65scription\x18\x01 \x01(\t\"\x1d\n\x0f\x41\x64\x64TaskResponse\x12\n\n\x02id\x18\x01 \x01(\t\"\x1c\n\x0eGetTaskRequest\x12\n\n\x02id\x18\x01 \x01(\t\"2\n\x0fGetTaskResponse\x12\n\n\x02id\x18\x01 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x02 \x01(\t\"\x07\n\x05\x45mpty\"9\n\x11ListTasksResponse\x12$\n\x05tasks\x18\x01 \x03(\x0b\x32\x15.todo.GetTaskResponse2\xb0\x01\n\x0bTodoService\x12\x36\n\x07\x41\x64\x64Task\x12\x14.todo.AddTaskRequest\x1a\x15.todo.AddTaskResponse\x12\x36\n\x07GetTask\x12\x14.todo.GetTaskRequest\x1a\x15.todo.GetTaskResponse\x12\x31\n\tListTasks\x12\x0b.todo.Empty\x1a\x17.todo.ListTasksResponseb\x06proto3'
+# )
+
+
+_ADDTASKREQUEST = DESCRIPTOR.message_types_by_name['AddTaskRequest']
+_ADDTASKRESPONSE = DESCRIPTOR.message_types_by_name['AddTaskResponse']
+_GETTASKREQUEST = DESCRIPTOR.message_types_by_name['GetTaskRequest']
+_GETTASKRESPONSE = DESCRIPTOR.message_types_by_name['GetTaskResponse']
+_EMPTY = DESCRIPTOR.message_types_by_name['Empty']
+_LISTTASKSRESPONSE = DESCRIPTOR.message_types_by_name['ListTasksResponse']
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
+
+AddTaskRequest = _reflection.GeneratedProtocolMessageType('AddTaskRequest', (_message.Message,), {
+  'DESCRIPTOR' : _ADDTASKREQUEST,
+  '__module__' : 'todo_pb2'
+  # @@protoc_insertion_point(class_scope:todo.AddTaskRequest)
+  })
+_sym_db.RegisterMessage(AddTaskRequest)
+
+AddTaskResponse = _reflection.GeneratedProtocolMessageType('AddTaskResponse', (_message.Message,), {
+  'DESCRIPTOR' : _ADDTASKRESPONSE,
+  '__module__' : 'todo_pb2'
+  # @@protoc_insertion_point(class_scope:todo.AddTaskResponse)
+  })
+_sym_db.RegisterMessage(AddTaskResponse)
+
+GetTaskRequest = _reflection.GeneratedProtocolMessageType('GetTaskRequest', (_message.Message,), {
+  'DESCRIPTOR' : _GETTASKREQUEST,
+  '__module__' : 'todo_pb2'
+  # @@protoc_insertion_point(class_scope:todo.GetTaskRequest)
+  })
+_sym_db.RegisterMessage(GetTaskRequest)
+
+GetTaskResponse = _reflection.GeneratedProtocolMessageType('GetTaskResponse', (_message.Message,), {
+  'DESCRIPTOR' : _GETTASKRESPONSE,
+  '__module__' : 'todo_pb2'
+  # @@protoc_insertion_point(class_scope:todo.GetTaskResponse)
+  })
+_sym_db.RegisterMessage(GetTaskResponse)
+
+Empty = _reflection.GeneratedProtocolMessageType('Empty', (_message.Message,), {
+  'DESCRIPTOR' : _EMPTY,
+  '__module__' : 'todo_pb2'
+  # @@protoc_insertion_point(class_scope:todo.Empty)
+  })
+_sym_db.RegisterMessage(Empty)
+
+ListTasksResponse = _reflection.GeneratedProtocolMessageType('ListTasksResponse', (_message.Message,), {
+  'DESCRIPTOR' : _LISTTASKSRESPONSE,
+  '__module__' : 'todo_pb2'
+  # @@protoc_insertion_point(class_scope:todo.ListTasksResponse)
+  })
+_sym_db.RegisterMessage(ListTasksResponse)
+
+
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
